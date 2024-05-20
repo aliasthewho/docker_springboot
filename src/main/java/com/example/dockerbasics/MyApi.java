@@ -14,9 +14,14 @@ public class MyApi {
         return new String("hello " + param + "!");
     }
 
-    @GetMapping("/getTestVariable")
+    @GetMapping("/getTestVariable/{name}")
     public String getMethodNameVariable(@PathVariable String name) {
         return new String("hello " + name + "!");
+    }
+    
+    @GetMapping
+    public String getMethodName() {
+        return "hello world infinitew!";
     }
     
 }
