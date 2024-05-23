@@ -2,13 +2,20 @@
 
 <br/>
 
-1. Building a docker image
+1. Building a docker image 
     1. Write a Dockerfile
     2. Build a docker image  
 2. Running containers
     1. Running and stopping containers
     2. Exposing ports and 
     3. Mouting volumens for data persistence
+        1. Application configuration
+        2. Log management
+        3. Persistent storage
+        4. File uploads
+        5. Dev environments
+        6. Data backup
+        7. Data sharing
     4. Env variables and configuration
 3. Containers management
     1. Running containers
@@ -112,3 +119,4 @@ docker build -t demo-springboot-docker .
 docker run -p 8080:8080 -v $(pwd):/app demo-springboot-docker
 ```
 
+3. Containers management
