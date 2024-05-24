@@ -22,8 +22,8 @@
     2. Inspect containers
     3. Delete containers and images
 4. Docker compose
-    1. docker-compose.yml
-    2. Running apps with DC
+    1. docker-compose.ym
+    2. Running apps
 5. Optimization and best practices
     1. Reduce the container size
     2. Dockerfile layers
@@ -119,4 +119,25 @@ docker build -t demo-springboot-docker .
 docker run -p 8080:8080 -v $(pwd):/app demo-springboot-docker
 ```
 
-3. Containers management
+##### 3. Containers management
+
+```bash
+docker ps [-a]
+docker inspect [container_id]
+docker stop [container_id]
+docker start [container-id_or_name]
+docker rm [-f] [container_id]
+docker images
+docker rmi [image_id]
+docker container prune [-a]
+docker volume prune
+docker logs [container_id]
+docker exec -it [container_id] /bin/bash
+```
+
+##### 4. Docker compose
+
+For this simple example and aiming to demonstrate its applicatiblity without adding an extra service like a database, we duplicated the service. Bear in mind that this docker-compose.yml file and the nginx.conf both are develop env oriented just to not complicate the whole example.
+
+
+
