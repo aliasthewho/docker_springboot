@@ -24,6 +24,11 @@ RUN ls -la /usr/src/app/src
 RUN mvn clean install -DskipTests
 
 FROM openjdk:17-jdk-slim
+RUN groupadd -r mikegroup && useradd -r -g mikegroup mike
+RUN mkdir -p /usr/src/app && chown -R mike:mikegroup /usr/src/app
+WORKDIR /usr/src/app
+RUN pwd
+USER mike
 COPY --from=builder /usr/src/app/target/dockerbasics-0.0.1.jar /usr/app/myapp.jar
 EXPOSE 8080
 ENTRYPOINT [ "java", "-jar", "/usr/app/myapp.jar"]

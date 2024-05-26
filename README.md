@@ -141,3 +141,10 @@ For this simple example and aiming to demonstrate its applicatiblity without add
 
 
 
+##### 5. Optimization and best practices
+
+* Optimization related to using stages to build the final images.
+* Changing the ownership: As shown in the Dockerfile, it was added a group and a new user added to that group, which will be the owner.
+
+###### 5.3 Security:
+It could be csonsidered using Selinux or apparmor.
